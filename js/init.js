@@ -37,11 +37,73 @@ var getJSONData = function(url){
         result.data = error;
         hideSpinner();
         return result;
+        
     });
+    
 }
+
+
+
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
+
+
+
 document.addEventListener("DOMContentLoaded", function(e){
+ 
+  
+
 });
+
+let logueado = localStorage.getItem("email");
+
+if(logueado === null){
+ window.location.href = "login.html"
+}
+
+let navBar = document.getElementsByClassName("container d-flex flex-column flex-md-row justify-content-between")[0];
+
+let link = document.createElement("a");
+link.id = "linkUser";
+link.href = "#";
+let user = document.createTextNode(logueado);
+link.appendChild(user);
+navBar.appendChild(link);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+

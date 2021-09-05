@@ -33,6 +33,7 @@ function sortCategories(criteria, array){
     }
 
     return result;
+    
 }
 
 function showCategoriesList(){
@@ -87,11 +88,17 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (resultObj.status === "ok"){
             sortAndShowCategories(ORDER_ASC_BY_NAME, resultObj.data);
         }
+        
     });
-
+    
+    
     document.getElementById("sortAsc").addEventListener("click", function(){
         sortAndShowCategories(ORDER_ASC_BY_NAME);
+        
+        
     });
+    
+
 
     document.getElementById("sortDesc").addEventListener("click", function(){
         sortAndShowCategories(ORDER_DESC_BY_NAME);

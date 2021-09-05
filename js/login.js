@@ -1,6 +1,22 @@
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e){
+let submit = document.getElementById("submit")
+submit.addEventListener("click", function(evento){
+    evento.preventDefault();
+    let email = document.getElementById("email").value;
+    localStorage.setItem("email", email);
+    let contrasena = document.getElementById("contrasena").value;
+    
+    if (email === "" || contrasena === ""){
+        alert("Debe completar todos los campos!");
+    }
+    
+    if(email !== "" && contrasena !== ""){
+        window.location.href = "index.html"
+    }
+    
+    
 
 });
+ 
+
+
+
